@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import CustomCursor from './components/CustomCursor';
-import CloudBackground from './components/CloudBackground';
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import Initiatives from './components/Initiatives';
-import SuccessStories from './components/SuccessStories';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import CustomCursor from './comps/CustomCursor';
+import CloudBackground from './comps/CloudBackground';
+import Navigation from './comps/Navigation';
+import Hero from './comps/Hero';
+import Initiatives from './comps/Initiatives';
+import SuccessStories from './comps/SuccessStories';
+import Contact from './comps/Contact';
+import Footer from './comps/Footer';
 
 function App() {
   useEffect(() => {
