@@ -35,7 +35,7 @@ const Contact = () => {
       className="min-h-screen flex flex-col justify-center items-center text-center py-20 relative"
     >
       <div className="w-[90%] max-w-6xl mx-auto">
-        <h2 className="text-[clamp(2rem,5vw,3rem)] mb-8">No idea is a bad idea, Reach us</h2>
+        <h2 className="text-[clamp(2rem,5vw,3rem)] mb-8">No idea is a bad idea, Reach us!</h2>
         <div 
           className="text-5xl text-white opacity-70 cursor-pointer transition-all duration-300 animate-bounce hover:opacity-100 hover:text-[var(--accent-orange)]"
           onClick={handleArrowClick}

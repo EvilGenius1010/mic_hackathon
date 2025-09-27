@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import CustomCursor from './comps/CustomCursor';
 import CloudBackground from './comps/CloudBackground';
 import Navigation from './comps/Navigation';
@@ -7,8 +7,11 @@ import Initiatives from './comps/Initiatives';
 import SuccessStories from './comps/SuccessStories';
 import Contact from './comps/Contact';
 import Footer from './comps/Footer';
+import LoadingAnimation from './comps/LoadingAnimation';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     // Staggered animation for sections
     const observerOptions = {
@@ -46,31 +49,36 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      {/* Custom Cursor */}
-      <CustomCursor />
+    <>
+      {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
+      {!loading && (
+        <div className="min-h-screen">
+          {/* Custom Cursor */}
+          <CustomCursor />
 
-      {/* Cloud Background */}
-      <CloudBackground />
+          {/* Cloud Background */}
+          <CloudBackground />
 
-      {/* Vertical Navigation */}
-      <Navigation />
+          {/* Vertical Navigation */}
+          <Navigation />
 
-      {/* Hero Section */}
-      <Hero />
+          {/* Hero Section */}
+          <Hero />
 
-      {/* Initiatives Section */}
-      <Initiatives />
+          {/* Initiatives Section */}
+          <Initiatives />
 
-      {/* Success Stories Section */}
-      <SuccessStories />
+          {/* Success Stories Section */}
+          <SuccessStories />
 
-      {/* Contact Section */}
-      <Contact />
+          {/* Contact Section */}
+          <Contact />
 
-      {/* Footer */}
-      <Footer />
-    </div>
+          {/* Footer */}
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 
