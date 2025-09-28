@@ -55,9 +55,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--primary-black);
   color: var(--primary-white);
-  overflow-x: hidden;
   line-height: 1.6;
   cursor: none;
+  overflow: auto; /* Ensure scrolling is enabled */
 }
 
 /* Custom Cursor */
@@ -330,11 +330,11 @@ p {
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --secondary-foreground: var(--primary-white);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --accent-foreground: var(--primary-white);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
@@ -362,4 +362,22 @@ p {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Hide scrollbar styles */
+/* Updated styles to hide the scrollbar but retain scrolling functionality */
+
+body {
+  /* Ensure scrolling is enabled */
+  overflow: auto;
+}
+
+/* Hide scrollbar for specific browsers */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

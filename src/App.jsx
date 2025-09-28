@@ -6,7 +6,6 @@ import Hero from './comps/Hero';
 import Initiatives from './comps/Initiatives';
 import SuccessStories from './comps/SuccessStories';
 import Contact from './comps/Contact';
-import Footer from './comps/Footer';
 import LoadingAnimation from './comps/LoadingAnimation';
 
 function App() {
@@ -73,9 +72,6 @@ function App() {
 
           {/* Contact Section */}
           <Contact />
-
-          {/* Footer */}
-          <Footer />
         </div>
       )}
     </>
